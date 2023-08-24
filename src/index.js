@@ -49,12 +49,12 @@ mongoose.connect(URI)
 
 app.get('/', (req, res) => {
   redisClient.set('products', 'products.....');
-  res.send('<h1> Hello Mohammadd</h1>');
+  res.send('<h1> Hello Mohammadddd</h1>');
 }); 
 
 app.get('/data', async (req, res) => {
   const products = await redisClient.get('products');
-  res.send(`<h1> Hello Mohammad555</h1> <h2>${products}</h2>`);
+  res.send(`<h1> Hello Mohammad55555</h1> <h2>${products}</h2>`);
 }); 
 
 
