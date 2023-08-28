@@ -51,7 +51,7 @@ mongoose.connect(URI)
 app.get('/', (req, res) => {
   redisClient.set('products', 'products.....');
   console.log(`traffic from ${os.hostname}`);
-  res.send('<h1> Hello with watchtower</h1>');
+  res.send('<h1> Hello with docker Swarm</h1>');
 }); 
 
 app.get('/data', async (req, res) => {
