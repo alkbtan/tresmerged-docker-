@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const redis = require('redis');
-const {Client} = require('pg');
+// const {Client} = require('pg');
+const os = require('os');
 // init app
 const PORT =process.env.PORT || 4000;
 const app = express();
@@ -49,7 +50,8 @@ mongoose.connect(URI)
 
 app.get('/', (req, res) => {
   redisClient.set('products', 'products.....');
-  res.send('<h1> Hello dockerhubbb</h1>');
+  console.log(`traffic from ${os.hostname}`);
+  res.send('<h1> Hello with watchtower</h1>');
 }); 
 
 app.get('/data', async (req, res) => {
